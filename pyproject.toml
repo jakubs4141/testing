@@ -1,0 +1,19 @@
+---
+
+## 2) `pyproject.toml`
+```toml
+[project]
+name = "iot-support-assistant"
+version = "0.1.0"
+description = "Demo IoT support tool for log analysis and reports"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+iot-support = "iot_support.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
